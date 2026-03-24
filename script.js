@@ -146,30 +146,3 @@ document.getElementById("contact-form").addEventListener("submit", function (e) 
       btn.disabled = false;
     });
 });
-
-// Theme toggle
-const themeToggle = document.getElementById('theme-toggle');
-const themeToggleMobile = document.getElementById('theme-toggle-mobile');
-const themeIcon = document.getElementById('theme-icon');
-const themeIconMobile = document.getElementById('theme-icon-mobile');
-
-function setTheme(isLight) {
-  document.body.classList.toggle('light', isLight);
-  const iconClass = isLight ? 'fa-sun' : 'fa-moon';
-  themeIcon.className = `fa-solid ${iconClass}`;
-  themeIconMobile.className = `fa-solid ${iconClass}`;
-  localStorage.setItem('theme', isLight ? 'light' : 'dark');
-}
-
-themeToggle.addEventListener('click', () => {
-  setTheme(!document.body.classList.contains('light'));
-});
-
-themeToggleMobile.addEventListener('click', () => {
-  setTheme(!document.body.classList.contains('light'));
-});
-
-// Remember preference on reload
-if (localStorage.getItem('theme') === 'light') {
-  setTheme(true);
-}
