@@ -1,22 +1,43 @@
-Sharushan Asokan — Portfolio (Nordan AI)
-🌐 Live Site: https://sharushanasokan.github.io/Portfolio/
-A personal developer portfolio built with HTML, Tailwind CSS, and vanilla JavaScript. This version features an AI-powered chatbot using Nordan AI instead of a rule-based system, and uses a single fixed dark theme.
+# Sharushan Asokan — Portfolio (Nordan AI)
 
-🚀 Getting Started
-1. Clone the repository
-bashgit clone https://github.com/SharushanAsokan/Portfolio.git
+🌐 **Live Site: [https://sharushanasokan.github.io/Portfolio/](https://sharushanasokan.github.io/Portfolio/)**
+
+A personal developer portfolio built with HTML, Tailwind CSS, and vanilla JavaScript. This version features an AI-powered chatbot using **Nordan AI** instead of a rule-based system, and uses a single fixed dark theme.
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/SharushanAsokan/Portfolio.git
 cd Portfolio
-2. Install Tailwind CSS
+```
+
+### 2. Install Tailwind CSS
+
 Make sure you have Node.js installed, then run:
-bashnpm install
-3. Start the Tailwind watcher
-Run this in your terminal every time you work on the project. It watches input.css and compiles changes into output.css automatically:
-bashnpx tailwindcss -i ./input.css -o ./output.css --watch
 
-Important: Keep this running in the background while you're making changes. If you close it, your CSS changes won't apply.
+```bash
+npm install
+```
 
+### 3. Start the Tailwind watcher
 
-📁 Project Structure
+Run this in your terminal every time you work on the project. It watches `input.css` and compiles changes into `output.css` automatically:
+
+```bash
+npx tailwindcss -i ./input.css -o ./output.css --watch
+```
+
+> **Important:** Keep this running in the background while you're making changes. If you close it, your CSS changes won't apply.
+
+---
+
+## 📁 Project Structure
+
+```
 Portfolio/
 │
 ├── index.html          # Main HTML file — all sections live here
@@ -30,30 +51,37 @@ Portfolio/
 │
 └── Icons/
     ├── Favicon.jpeg
+```
 
-✏️ Making Changes
-Editing content
-All your sections (About, Skills, Projects etc.) are inside index.html. Just find the section and update the text.
-Editing styles
+---
 
-Open input.css and make your changes
-Tailwind watcher must be running (--watch command above) to compile them
-Never edit output.css directly — it gets overwritten every time Tailwind compiles
+## ✏️ Making Changes
 
-Editing JavaScript
-All logic is in script.js. It's split into clearly commented sections:
+### Editing content
+All your sections (About, Skills, Projects etc.) are inside `index.html`. Just find the section and update the text.
 
-Mobile menu
-Typing animation
-Scroll animations
-Button glow effect
-Contact form (EmailJS)
-Nordan AI Chatbot
+### Editing styles
+- Open `input.css` and make your changes
+- Tailwind watcher must be running (`--watch` command above) to compile them
+- Never edit `output.css` directly — it gets overwritten every time Tailwind compiles
 
+### Editing JavaScript
+All logic is in `script.js`. It's split into clearly commented sections:
+- Mobile menu
+- Typing animation
+- Scroll animations
+- Button glow effect
+- Contact form (EmailJS)
+- Nordan AI Chatbot
 
-🔄 Workflow — The 3 Commands You Need
+---
+
+## 🔄 Workflow — The 3 Commands You Need
+
 Every time you sit down to work on this project, run these three things:
-bash# 1. Navigate into the project folder
+
+```bash
+# 1. Navigate into the project folder
 cd Portfolio
 
 # 2. Start Tailwind watcher (keep this running)
@@ -63,47 +91,88 @@ npx tailwindcss -i ./input.css -o ./output.css --watch
 git add .
 git commit -m "your message here"
 git push
+```
 
-✨ Features
-FeatureDetailsResponsive DesignWorks on mobile, tablet, and desktopDark ThemeFixed dark theme — no toggleTyping AnimationCycles through job titles in the hero sectionScroll AnimationsCards and sections animate in as you scrollButton Glow EffectButtons have a mouse-tracking radial glow on hoverNordan AI ChatbotPowered by Nordan AI — understands natural language questionsContact FormSends emails via EmailJS — no backend neededGlassmorphism NavbarBlurred navbar with animated shimmer line at the topCV DownloadDirect link to download the resume PDF
+---
 
-🤖 Nordan AI Chatbot
-This version uses Nordan AI instead of a simple keyword-matching chatbot. This means:
+## ✨ Features
 
-It understands natural language — users don't need to type exact keywords
-It can handle follow-up questions and varied phrasing
-Responses feel more conversational and intelligent
+| Feature | Details |
+|---|---|
+| **Responsive Design** | Works on mobile, tablet, and desktop |
+| **Dark Theme** | Fixed dark theme — no toggle |
+| **Typing Animation** | Cycles through job titles in the hero section |
+| **Scroll Animations** | Cards and sections animate in as you scroll |
+| **Button Glow Effect** | Buttons have a mouse-tracking radial glow on hover |
+| **Nordan AI Chatbot** | Powered by Nordan AI — understands natural language questions |
+| **Contact Form** | Sends emails via EmailJS — no backend needed |
+| **Glassmorphism Navbar** | Blurred navbar with animated shimmer line at the top |
+| **CV Download** | Direct link to download the resume PDF |
 
-To update or reconfigure the Nordan AI integration, find the chatbot section in script.js and update your API key or endpoint as needed.
+---
 
-📬 Contact Form Setup (EmailJS)
-The contact form uses EmailJS to send emails without a backend.
-If you need to reconfigure it, update these values in script.js:
-jsemailjs.init("YOUR_PUBLIC_KEY");
+## 🤖 Nordan AI Chatbot
+
+This version uses **Nordan AI** instead of a simple keyword-matching chatbot. This means:
+
+- It understands natural language — users don't need to type exact keywords
+- It can handle follow-up questions and varied phrasing
+- Responses feel more conversational and intelligent
+
+To update or reconfigure the Nordan AI integration, find the chatbot section in `script.js` and update your API key or endpoint as needed.
+
+---
+
+## 📬 Contact Form Setup (EmailJS)
+
+The contact form uses [EmailJS](https://www.emailjs.com/) to send emails without a backend.
+
+If you need to reconfigure it, update these values in `script.js`:
+
+```js
+emailjs.init("YOUR_PUBLIC_KEY");
 
 emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", templateParams)
+```
+
 You can find these in your EmailJS dashboard.
 
-🎨 Theme Customization
-The portfolio uses a fixed dark theme. The main accent colors are purple and blue. To change them, update this in input.css:
-css:root {
+---
+
+## 🎨 Theme Customization
+
+The portfolio uses a fixed dark theme. The main accent colors are purple and blue. To change them, update this in `input.css`:
+
+```css
+:root {
   --primary: 250 66% 61%; /* HSL values — change this */
 }
-And search for from-purple-500 to-blue-500 in index.html to update the gradient classes.
+```
 
-🌐 Deploying to GitHub Pages
+And search for `from-purple-500 to-blue-500` in `index.html` to update the gradient classes.
 
-Push your code to GitHub
-Go to your repository → Settings → Pages
-Under Source, select main branch and / (root) folder
-Click Save — your site will be live at the link above
+---
 
+## 🌐 Deploying to GitHub Pages
 
-Make sure output.css is committed and pushed — GitHub Pages needs it since it can't run the Tailwind watcher.
+1. Push your code to GitHub
+2. Go to your repository → **Settings** → **Pages**
+3. Under **Source**, select `main` branch and `/ (root)` folder
+4. Click **Save** — your site will be live at the link above
 
+> Make sure `output.css` is committed and pushed — GitHub Pages needs it since it can't run the Tailwind watcher.
 
-🆚 Difference Between This Repo and Personal-Portfolio
-Personal-PortfolioPortfolioChatbotRule-based (keyword matching)Nordan AI (natural language)ThemeDark + Light mode toggleDark only
+---
 
-📝 License
+## 🆚 Difference Between This Repo and Personal-Portfolio
+
+| | [Personal-Portfolio](https://sharushanasokan.github.io/Personal-Portfolio/) | [Portfolio](https://sharushanasokan.github.io/Portfolio/) |
+|---|---|---|
+| **Chatbot** | Rule-based (keyword matching) | Nordan AI (natural language) |
+| **Theme** | Dark + Light mode toggle | Dark only |
+
+---
+
+## 📝 License
+
 This project is personal and not open for redistribution. Feel free to use it as inspiration for your own portfolio.
